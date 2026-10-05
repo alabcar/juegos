@@ -44,7 +44,7 @@ h1 span { color: #d9363e; }
     </div>
     <div class="langs" role="group">
       <button type="button" data-lang="es">ES</button>
-      <button type="button" data-lang="ca">CA</button>
+      <button type="button" data-lang="va">VA</button>
       <button type="button" data-lang="en">EN</button>
     </div>
   </header>
@@ -53,19 +53,20 @@ h1 span { color: #d9363e; }
 <script>
 const T = {
   es: { lede: "Échate unas partidas", play: "Jugar", empty: "Pronto habrá juegos aquí." },
-  ca: { lede: "Fes-te unes partides", play: "Jugar", empty: "Prompte hi haurà jocs ací." },
+  va: { lede: "Fes-te unes partides", play: "Jugar", empty: "Prompte hi haurà jocs ací." },
   en: { lede: "Play a few rounds", play: "Play", empty: "Games coming soon." }
 };
 let lang = "es";
 let games = [];
 let loaded = false;
 try { lang = localStorage.getItem("lang") || ""; } catch (e) { lang = ""; }
+if (lang === "ca") lang = "va";
 if (!T[lang]) {
   const n = (navigator.language || "es").slice(0, 2).toLowerCase();
-  lang = T[n] ? n : (n === "va" ? "ca" : "es");
+  lang = T[n] ? n : (n === "ca" ? "va" : "es");
 }
 function render() {
-  document.documentElement.lang = lang;
+  document.documentElement.lang = lang === "va" ? "ca-valencia" : lang;
   document.getElementById("lede").textContent = T[lang].lede;
   document.querySelectorAll(".langs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang));
   const shelf = document.getElementById("shelf");
@@ -90,7 +91,7 @@ function render() {
     h.textContent = g.nombre;
     const p = document.createElement("p");
     const d = g.descripcion || {};
-    p.textContent = d[lang] || d.es || "";
+    p.textContent = d[lang] || (lang === "va" && d.ca) || d.es || "";
     const s = document.createElement("span");
     s.className = "play";
     s.textContent = T[lang].play + " ▸";

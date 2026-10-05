@@ -8,7 +8,7 @@
     "acento": "#C8553D",
     "descripcion": {
       "es": "El profe de música te pone escalas y canciones: toca cada nota a su tiempo y no desafines.",
-      "ca": "El professor de música et posa escales i cançons: toca cada nota al seu temps i no desafines.",
+      "va": "El professor de música et posa escales i cançons: aprén a tocar cada nota al seu temps i no desafines.",
       "en": "The music teacher sets you scales and songs: hit every note on time and stay in tune."
     }
   },
@@ -21,7 +21,7 @@
     "acento": "#f2a46e",
     "descripcion": {
       "es": "Engulle el pueblo en 60 segundos y deja todo bajo el dominio de su patrocinio.",
-      "ca": "Engoleix el poble en 60 segons i deixa-ho tot sota el domini del seu patrocini.",
+      "va": "Engolix el poble en 60 segons i deixa-ho tot davall del domini del seu patrocini.",
       "en": "Swallow the town in 60 seconds and leave everything under the rule of its patronage."
     }
   },
@@ -34,7 +34,7 @@
     "acento": "#E2502A",
     "descripcion": {
       "es": "Programa sin parar… hasta que Julia se asoma por la puerta. Suelta a tiempo y disimula.",
-      "ca": "Programa sense parar… fins que Júlia s’acosta a la porta. Deixa anar a temps i dissimula.",
+      "va": "Programa sense parar… fins que Júlia guaita per la porta. Solta a temps i dissimula.",
       "en": "Keep coding… until Julia pops her head in the door. Let go in time and play it cool."
     }
   },
@@ -47,7 +47,7 @@
     "acento": "#FF5A82",
     "descripcion": {
       "es": "Suelta piezas sobre una balanza que se inclina. Si se caen tres, se acabó.",
-      "ca": "Deixa caure peces sobre una balança que s’inclina. Si en cauen tres, s’ha acabat.",
+      "va": "Deixa caure peces damunt d’una balança que s’inclina. Si en cauen tres, s’ha acabat.",
       "en": "Drop pieces on a tilting balance. Lose three and it’s over."
     }
   },
@@ -60,7 +60,7 @@
     "acento": "#2B59FF",
     "descripcion": {
       "es": "Toca cuando el anillo encaje en el círculo. Los perfectos encadenan combos.",
-      "ca": "Toca quan l’anell encaixi al cercle. Els perfectes encadenen combos.",
+      "va": "Toca quan l’anell encaixe en el cercle. Els perfectes encadenen combos.",
       "en": "Tap when the ring fits the circle. Perfect taps chain combos."
     }
   },
@@ -73,7 +73,7 @@
     "acento": "#C8245E",
     "descripcion": {
       "es": "Descubre la palabra oculta con un solo hilo que pase por todas las casillas.",
-      "ca": "Descobreix la paraula amagada amb un sol fil que passi per totes les caselles.",
+      "va": "Descobrix la paraula amagada amb un sol fil que passe per totes les caselles.",
       "en": "Find the hidden word with one thread that passes through every cell."
     }
   },
@@ -86,7 +86,7 @@
     "acento": "#C8243A",
     "descripcion": {
       "es": "Vierte mermelada entre tarros hasta separar los colores… y cuidado con las mezclas.",
-      "ca": "Aboca melmelada entre pots fins a separar els colors… i compte amb les mescles.",
+      "va": "Aboca melmelada entre pots fins a separar els colors… i compte amb les mescles.",
       "en": "Pour jam between jars until every colour is sorted… and mind the mixes."
     }
   },
@@ -99,7 +99,7 @@
     "acento": "#F2445A",
     "descripcion": {
       "es": "Corta cada figura de un solo tajo en dos mitades iguales.",
-      "ca": "Talla cada figura d'un sol tall en dues meitats iguals.",
+      "va": "Talla cada figura d’un sol tall en dos meitats iguals.",
       "en": "Slice each shape in one stroke into two equal halves."
     }
   },
@@ -112,7 +112,7 @@
     "acento": "#7B6CF6",
     "descripcion": {
       "es": "Infla pompas sin que las toquen los erizos y cubre dos tercios del estanque.",
-      "ca": "Infla bombolles sense que les toquen els eriçons i cobreix dos terços de l'estany.",
+      "va": "Infla bambolles sense que les toquen els eriçons i cobrix dos terços de l’estany.",
       "en": "Blow bubbles without letting the urchins touch them and cover two thirds of the pond."
     }
   },
@@ -125,7 +125,7 @@
     "acento": "#FF4FD8",
     "descripcion": {
       "es": "Apunta, dispara la canica y rompe todos los clavos naranjas.",
-      "ca": "Apunta, dispara la bala i trenca tots els claus taronja.",
+      "va": "Apunta, dispara la boleta i trenca tots els claus taronja.",
       "en": "Aim, fire the marble and break every orange peg."
     }
   },
@@ -138,7 +138,7 @@
     "acento": "#FFD966",
     "descripcion": {
       "es": "Balancéate de liana en liana sobre el río y llega lo más lejos posible.",
-      "ca": "Gronxa’t de liana en liana sobre el riu i arriba tan lluny com pugues.",
+      "va": "Gronxa’t de liana en liana sobre el riu i arriba tan lluny com pugues.",
       "en": "Swing vine to vine over the river and go as far as you can."
     }
   },
@@ -151,7 +151,7 @@
     "acento": "#F8D86E",
     "descripcion": {
       "es": "Lanza al muñeco escaleras abajo y suma batacazos.",
-      "ca": "Llança el ninot escales avall i suma batacades.",
+      "va": "Llança el ninot escales avall i suma batacades.",
       "en": "Fling the ragdoll down the stairs and rack up the wipeouts."
     }
   },
@@ -164,7 +164,7 @@
     "acento": "#F07F72",
     "descripcion": {
       "es": "Toca un coche para que salga recto. Si choca, pierdes una vida.",
-      "ca": "Toca un cotxe perquè isca recte. Si xoca, perds una vida.",
+      "va": "Toca un cotxe perquè isca recte. Si xoca, perds una vida.",
       "en": "Tap a car to drive it straight out. Crash and you lose a life."
     }
   },
@@ -177,7 +177,7 @@
     "acento": "#D9412E",
     "descripcion": {
       "es": "Minigolf de nueve hoyos dibujado a cera: arrastra, suelta y al hoyo.",
-      "ca": "Minigolf de nou forats dibuixat amb ceres: arrossega, solta i al forat.",
+      "va": "Minigolf de nou forats dibuixat amb ceres: arrossega, solta i al forat.",
       "en": "Nine-hole crayon mini golf: drag, let go, sink it."
     }
   },
@@ -190,7 +190,7 @@
     "acento": "#FF48B0",
     "descripcion": {
       "es": "Llena la balanza de la frutería hasta el peso justo sin pasarte.",
-      "ca": "Ompli la balança de la fruiteria fins al pes just sense passar-te.",
+      "va": "Ompli la balança de la fruiteria fins al pes just sense passar-te.",
       "en": "Fill the market scale to the exact weight without going over."
     }
   },
@@ -203,7 +203,7 @@
     "acento": "#1F48B0",
     "descripcion": {
       "es": "Gira azulejos de Manises hasta cerrar el dibujo y cuécelo antes de que acabe el tiempo.",
-      "ca": "Gira rajoles de Manises fins a tancar el dibuix i cou-lo abans que s'acabe el temps.",
+      "va": "Gira rajoles de Manises fins a tancar el dibuix i cou-lo abans que s’acabe el temps.",
       "en": "Turn Manises tiles until the drawing closes, then fire it before time runs out."
     }
   },
@@ -216,7 +216,7 @@
     "acento": "#5fe3e8",
     "descripcion": {
       "es": "Eres un murciélago volando a ciegas por la cueva: chilla para ver las paredes y come polillas para recargar.",
-      "ca": "Ets un rat penat que vola a cegues per la cova: xiscla per a veure les parets i menja arnes per a recarregar.",
+      "va": "Eres un rat penat que vola a cegues per la cova: xiscla per a vore les parets i menja arnes per a recarregar.",
       "en": "You are a bat flying blind through a cave: screech to see the walls and eat moths to recharge."
     }
   },
@@ -229,7 +229,7 @@
     "acento": "#ee6a12",
     "descripcion": {
       "es": "Suelta frutas de la huerta en la caja: dos iguales se funden en una mayor hasta la Taronja d’Or.",
-      "ca": "Deixa caure fruita de l’horta a la caixa: dues d’iguals es fonen en una de més gran fins a la Taronja d’Or.",
+      "va": "Deixa caure fruita de l’horta en la caixa: dos iguals es fonen en una de més gran fins a la Taronja d’Or.",
       "en": "Drop orchard fruit into the crate: two alike merge into a bigger one, all the way to the Taronja d’Or."
     }
   }
