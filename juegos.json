@@ -1,5 +1,18 @@
 [
   {
+    "nombre": "Solfeo",
+    "url": "https://alabcar.github.io/solfeo/",
+    "publicado": true,
+    "fondo": "#F4EAD5",
+    "tinta": "#2D2A32",
+    "acento": "#C8553D",
+    "descripcion": {
+      "es": "El profe de música te pone escalas y canciones: toca cada nota a su tiempo y no desafines.",
+      "ca": "El professor de música et posa escales i cançons: toca cada nota al seu temps i no desafines.",
+      "en": "The music teacher sets you scales and songs: hit every note on time and stay in tune."
+    }
+  },
+  {
     "nombre": "Traga Foios",
     "url": "https://alabcar.github.io/tragafoios/",
     "publicado": true,
