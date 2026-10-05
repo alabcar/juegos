@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#2a1b2e">
+<title>Juegos de dudamán</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap">
+<style>
+:root { --paper: #f3e6cf; --ink: #2a1b2e; --muted: #7a5f6e; --line: #2a1b2e; --shadow: #2a1b2e; --pix: "Pixelify Sans", ui-monospace, Menlo, monospace; }
+@media (prefers-color-scheme: dark) { :root { --paper: #1a1220; --ink: #fff3dc; --muted: #b59aa8; --line: #fff3dc; --shadow: #000; color-scheme: dark; } }
+html, body { margin: 0; }
+body { min-height: 100vh; background: var(--paper); color: var(--ink); font-family: var(--pix); -webkit-tap-highlight-color: transparent;
+  background-image: linear-gradient(rgba(0,0,0,.035) 2px, transparent 2px), linear-gradient(90deg, rgba(0,0,0,.035) 2px, transparent 2px); background-size: 16px 16px; }
+.wrap { max-width: 1000px; margin: 0 auto; padding: 20px 16px 40px; display: grid; gap: 24px; }
+header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+h1 { margin: 0; font-weight: 700; font-size: clamp(40px, 11vw, 80px); line-height: .9; text-shadow: 4px 4px 0 #f2a46e; }
+h1 span { color: #d9363e; }
+.lede { margin: 12px 0 0; font-size: 20px; color: var(--muted); }
+.langs { display: flex; gap: 8px; }
+.langs button { min-width: 46px; height: 46px; border: 3px solid var(--line); background: transparent; color: var(--ink); font: 700 14px var(--pix); cursor: pointer; box-shadow: 3px 3px 0 var(--shadow); }
+.langs button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.langs button:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--shadow); }
+.shelf { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+.game { display: grid; grid-template-rows: auto 1fr auto; gap: 10px; padding: 16px; background: var(--bg); color: var(--fg); border: 3px solid var(--line); box-shadow: 5px 5px 0 var(--shadow); text-decoration: none; transition: transform .12s steps(2); }
+.game:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--shadow); }
+.game:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--shadow); }
+.game:focus-visible { outline: 3px dashed var(--acc); outline-offset: 4px; }
+.game h2 { margin: 0; font-size: 32px; line-height: 1; text-shadow: 2px 2px 0 var(--acc); }
+.game p { margin: 0; font-size: 16px; line-height: 1.3; }
+.play { justify-self: start; padding: 6px 14px; background: var(--acc); color: var(--bg); font-weight: 700; font-size: 16px; border: 2px solid var(--fg); }
+.empty { color: var(--muted); font-size: 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Juegos de <span>dudamán</span></h1>
+      <p class="lede" id="lede"></p>
+    </div>
+    <div class="langs" role="group">
+      <button type="button" data-lang="es">ES</button>
+      <button type="button" data-lang="ca">CA</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </header>
+  <main class="shelf" id="shelf"></main>
+</div>
+<script>
+const T = {
+  es: { lede: "Échate unas partidas", play: "Jugar", empty: "Pronto habrá juegos aquí." },
+  ca: { lede: "Fes-te unes partides", play: "Jugar", empty: "Prompte hi haurà jocs ací." },
+  en: { lede: "Play a few rounds", play: "Play", empty: "Games coming soon." }
+};
+let lang = "es";
+let games = [];
+let loaded = false;
+try { lang = localStorage.getItem("lang") || ""; } catch (e) { lang = ""; }
+if (!T[lang]) {
+  const n = (navigator.language || "es").slice(0, 2).toLowerCase();
+  lang = T[n] ? n : (n === "va" ? "ca" : "es");
+}
+function render() {
+  document.documentElement.lang = lang;
+  document.getElementById("lede").textContent = T[lang].lede;
+  document.querySelectorAll(".langs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang));
+  const shelf = document.getElementById("shelf");
+  shelf.textContent = "";
+  const visible = games.filter(g => g.publicado === true);
+  if (!visible.length) {
+    if (!loaded) return;
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = T[lang].empty;
+    shelf.append(p);
+    return;
+  }
+  for (const g of visible) {
+    const a = document.createElement("a");
+    a.className = "game";
+    a.href = g.url;
+    a.style.setProperty("--bg", g.fondo || "#fff");
+    a.style.setProperty("--fg", g.tinta || "#000");
+    a.style.setProperty("--acc", g.acento || "#d9363e");
+    const h = document.createElement("h2");
+    h.textContent = g.nombre;
+    const p = document.createElement("p");
+    const d = g.descripcion || {};
+    p.textContent = d[lang] || d.es || "";
+    const s = document.createElement("span");
+    s.className = "play";
+    s.textContent = T[lang].play + " ▸";
+    a.append(h, p, s);
+    shelf.append(a);
+  }
+}
+document.querySelectorAll(".langs button").forEach(b => b.addEventListener("click", () => {
+  lang = b.dataset.lang;
+  try { localStorage.setItem("lang", lang); } catch (e) {}
+  render();
+}));
+fetch("juegos.json", { cache: "no-store" })
+  .then(r => r.json())
+  .then(list => { games = Array.isArray(list) ? list : []; })
+  .catch(() => {})
+  .finally(() => { loaded = true; render(); });
+render();
+</script>
+</body>
+</html>
