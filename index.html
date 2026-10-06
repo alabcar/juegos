@@ -51,6 +51,16 @@ h1 span { color: #d9363e; }
   <main class="shelf" id="shelf"></main>
 </div>
 <script>
+(() => {
+  try {
+    if (/^(localhost|127\.|\[::1\])/.test(location.hostname)) return;
+    const sc = document.createElement('script');
+    sc.async = true;
+    sc.dataset.goatcounter = 'https://alabcar.goatcounter.com/count';
+    sc.src = 'https://gc.zgo.at/count.js';
+    document.head.appendChild(sc);
+  } catch (e) {}
+})();
 const T = {
   es: { lede: "Échate unas partidas", play: "Jugar", empty: "Pronto habrá juegos aquí." },
   va: { lede: "Fes-te unes partides", play: "Jugar", empty: "Prompte hi haurà jocs ací." },
