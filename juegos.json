@@ -39,6 +39,19 @@
     }
   },
   {
+    "nombre": "Tiempo perdido",
+    "url": "https://alabcar.github.io/tiempoperdido/",
+    "publicado": true,
+    "fondo": "#0f0a18",
+    "tinta": "#f3e7d2",
+    "acento": "#f7b56a",
+    "descripcion": {
+      "es": "Corre, salta y agárrate a las cosas que te hicieron ser quien eres antes de que se acabe el tiempo. Pide contraseña.",
+      "va": "Corre, bota i agafa't a les coses que et van fer ser qui eres abans que s'acabe el temps. Demana contrasenya.",
+      "en": "Run, jump and grab the things that made you who you are before time runs out. Password required."
+    }
+  },
+  {
     "nombre": "Equilibrio",
     "url": "https://alabcar.github.io/equilibrio/",
     "publicado": false,
